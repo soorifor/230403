@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 반응형: 사이즈에 따라 반응하는 웹 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dl, dt, dd, table, fome</title>
+</head>
+<body>
+    <!-- 정의 목록 태그 -->
+    <!-- dl>dt+dd -->
+    <dl>
+        <dt>마가렛</dt>
+        <dd>
+            <div>쌍떡잎식물 초롱꽃목 국화과의 여러해살이풀이다. 높이는 1m 정도이다.</div>
+            <div>가지가 많으며 밑 부분은 목질이다. 잎은 깃 모양으로 길게 갈라지며, 쑥갓잎처럼 생겼다.</div>
+            <div>여름부터 가을에 걸쳐 흰색, 노란색 따위의 두상화(頭狀花)가 피는데 들국화와 비슷하다.</div>
+            <div>꽃이 피어 있는 기간이 길다. 아프리카 카나리아 섬이 원산지이다.</div>
+        </dd>
+    </dl>
+
+    <!-- 표 태그 -->
+    <h1>표 만들기</h1>
+    <h2>1행 1열</h2>
+    <!-- table>tr>td -->
+    <table border="1">
+        <tr>
+            <td>1행 1열</td>
+        </tr>
+    </table>
+    <h2>1행 3열</h2>
+    <table border="2">
+        <tr>
+            <td>1행 1열</td>
+            <td>1행 2열</td>
+            <td>1행 3열</td>
+        </tr>
+    </table>
+    <h2>2행 3열</h2>
+    <table border="3">
+        <tr>
+            <td>1행 1열</td>
+            <td>1행 2열</td>
+            <td>1행 3열</td>
+        </tr>
+        <tr>
+            <td>2행 1열</td>
+            <td>2행 2열</td>
+            <td>2행 3열</td>
+        </tr>
+    </table>
+    <h2>3행 6열</h2>
+    <table border="4">
+        <tr>
+            <td>1행 1열</td>
+            <td>1행 2열</td>
+            <td>1행 3열</td>
+            <td>1행 4열</td>
+            <td>1행 5열</td>
+            <td>1행 6열</td>
+        </tr>
+        <tr>
+            <td>2행 1열</td>
+            <td>2행 2열</td>
+            <td>2행 3열</td>
+            <td>2행 4열</td>
+            <td>2행 5열</td>
+            <td>2행 6열</td>
+        </tr>
+        <tr>
+            <td>3행 1열</td>
+            <td>3행 2열</td>
+            <td>3행 3열</td>
+            <td>3행 4열</td>
+            <td>3행 5열</td>
+            <td>3행 6열</td>
+        </tr>
+    </table>
+
+<!-- 셀 합치기 - colspan -->
+<h2>셀 합치기</h2>
+<table border="1">
+    <tr>
+         <td colspan="3">공연 요금</td>
+    </tr>
+    <tr>
+         <td>구분</td>
+         <td>S석</td>
+         <td>VIP석</td>
+    </tr>
+    <tr>
+         <td>성인</td>
+         <td>30,000원</td>
+         <td>50,000원</td>
+    </tr>
+    <tr>
+         <td>청소년</td>
+         <td>10,000원</td>
+         <td>20,000원</td>
+    </tr>
+    <tr>
+         <td>소인</td>
+         <td colspan="2">미취학 아동, 일반 요금의 50%</td>
+    </tr>
+    <!-- 셀 합치기 - rowspan -->
+    <tr>
+        <td rowspan="2">공연 시간</td>
+        <td>1회</td>
+        <td>13:00 ~ 15:00</td>
+    </tr>
+    <tr>
+        <td>2회</td>
+        <td>17:00 ~ 19:00</td>
+    </tr>
+</table>
+<h1>details, summary</h1>
+<!-- details>summary+ul>li*4 -->
+<details>
+    <summary>Awakening</summary>
+    <ul>
+        <li>Feel the water in her body, water's never going out.</li>
+        <li>Feel the water in her body, water's never going out.</li>
+        <li>Feel the water in her body, water's never going out.</li>
+        <li>Feel the water in her body, water's never going out.</li>
+    </ul>
+</details>
+<!-- 투표진행률 : 최소값, 최대값, 현재값, 전체에서 낮은 값, 높은 값 -->
+<h2>투표진행률</h2>
+<p>서울: <meter min="0" max="100" value="20" low="30" high="65" title="percent"> </meter> 20% </p>
+<p>수원: <meter min="0" max="100" value="60" low="30" high="65" title="percent"> </meter> 60% </p>
+<p>세종: <meter min="0" max="100" value="90" low="30" high="65" title="percent"> </meter> 90% </p>
+
+<h1>progress</h1>
+<h2>파일 다운로드</h2>
+<progress max="100">
+</progress>
+
+<h1>텍스트 요소</h1>
+<h2>강조</h2>
+<p>AND I KEPT
+    <strong>RUNNING</strong>
+    <em>FOR A SOFT PLACE</em> 
+    <i>TO</i>
+    <mark>FALL</mark>
+</p>
+<h2>추가글, 삭제글</h2>
+<!-- p>del, p>ins -->
+<p>1차 정기세일:<del>1월 20일~3월 20일</del></p>
+<p>2차 정기세일:<ins>3월 21일~4월 21일</ins></p>
+<h2>윗첨자, 아래첨자</h2>
+m<sup>2</sup>
+co<sub>2</sub>
+<!-- form: 회원가입 -->
+<!-- 웹 접근성 때문에 for값과 id값은 동일해야 함 -->
+<form action="">
+    <fieldset>
+        <legend>input type</legend>
+        <!-- p>label+input -->
+        <p><label for="search"> 검색: </label>
+            <input type="search" id="search">
+        </p>
+        <p>
+            <!-- 최소값, 최대값, 현재값 -->
+            <label for="number"> 수량: </label>
+            <input type="number" id="number"
+            min="1" max="10" value="1">
+        </p>
+        <p>
+            <label for="range"> 만족도: </label>
+            <input type="range" id="range"
+            min="1" max="10" value="5">
+        </p>
+        <p>
+            <label for="date"> 날짜: </label>
+            <input type="date" id="date">
+        </p>
+        <p>
+            <label for="month"> 월: </label>
+            <input type="month" id="month">
+        </p>
+        <p>
+            <label for="week"> 주: </label>
+            <input type="week" id="week">
+        </p>
+        <p>
+            <label for="time"> 시간: </label>
+            <input type="time" id="time">
+        </p>
+        <p>
+            <label for="color"> 색상: </label>
+            <input type="color" id="color">
+        </p>
+    </fieldset>
+</form>
+
+</body>
+</html>
